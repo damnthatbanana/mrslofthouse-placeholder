@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mrs Lofthouse's Emporium · Books bought and sold · Scarborough</title>
+<meta name="description" content="Second-hand and new bookshop at 4 Queen Street, Scarborough, a stone's throw from the beach. Established 1981. Open seven days. We buy books: send us photos.">
+<!-- Placeholder while the new site is built. No PHP, no cookies, nothing loaded from anywhere else.
+     The sell form stores nothing: it opens WhatsApp or the visitor's email with their message filled in.
+     Published to GitHub Pages by tools/publish_placeholder.py, which also makes 404.html from this page. -->
+<style>
+  :root {
+    --fascia: #4f6b6a;
+    --fascia-dark: #3b5150;
+    --cream: #e8dcc4;
+    --paper: #f6f0e3;
+    --ink: #2a2723;
+    --muted: #5d5850;
+    --terracotta: #b5533a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 17px/1.55 Georgia, "Times New Roman", serif;
+  }
+  a { color: var(--terracotta); }
+  .sign {
+    background: var(--fascia);
+    border-bottom: 6px solid var(--fascia-dark);
+    color: var(--cream);
+    text-align: center;
+    padding: 36px 16px 30px;
+  }
+  .sign h1 {
+    margin: 0;
+    font: 900 clamp(28px, 7vw, 60px)/1.05 "Rockwell", "Roboto Slab", "Georgia", serif;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0 var(--terracotta), 5px 5px 0 #1f2b2a;
+  }
+  .sign p {
+    margin: 14px 0 0;
+    font-size: 15px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 28px 16px 40px;
+  }
+  .notice {
+    font-size: 20px;
+    text-align: center;
+    margin: 0 0 28px;
+  }
+  section {
+    background: #fff;
+    border: 1px solid #e2d8c4;
+    border-top: 4px solid var(--fascia);
+    border-radius: 6px;
+    padding: 20px 22px;
+    margin: 0 0 20px;
+  }
+  h2 {
+    margin: 0 0 10px;
+    color: var(--fascia-dark);
+    font-size: 22px;
+  }
+  section p { margin: 0 0 10px; }
+  section p:last-child { margin-bottom: 0; }
+  table { border-collapse: collapse; }
+  td { padding: 2px 18px 2px 0; vertical-align: top; }
+  td + td { white-space: nowrap; padding-right: 0; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+  .button {
+    display: inline-block;
+    background: var(--terracotta);
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  .button.alt { background: var(--fascia); }
+  form label { display: block; margin: 0 0 12px; font-weight: bold; }
+  form .hint { font-weight: normal; color: var(--muted); }
+  form input, form textarea {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+    padding: 9px 10px;
+    border: 1px solid #c9bda6;
+    border-radius: 4px;
+    font: inherit;
+    background: #fffdf8;
+  }
+  form textarea { min-height: 110px; resize: vertical; }
+  .small { font-size: 15px; color: var(--muted); }
+  .vouchers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 14px; }
+  .vouchers a { display: block; text-align: center; font-weight: bold; text-decoration: none; }
+  .vouchers img { display: block; width: 100%; height: auto; border-radius: 6px; border: 1px solid #e2d8c4; margin-bottom: 6px; }
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+    padding: 0 16px 32px;
+  }
+</style>
+</head>
+<body>
+<header class="sign">
+  <h1>Mrs Lofthouse's Emporium</h1>
+  <p>Books bought &amp; sold · Established 1981</p>
+</header>
+
+<main>
+  <p class="notice">Our new website is on its way. The shop is open as usual.</p>
+
+  <section>
+    <h2>Visit us</h2>
+    <p>4 Queen Street, Scarborough YO11 1HA, a stone's throw from the beach.
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Mrs+Lofthouse%27s+Emporium+4+Queen+Street+Scarborough+YO11+1HA">Map</a></p>
+    <table>
+      <tr><td>Monday to Saturday</td><td>10am to 4:30pm</td></tr>
+      <tr><td>Sunday</td><td>11am to 4pm</td></tr>
+      <tr><td>Bank holidays</td><td>Open</td></tr>
+      <tr><td>Christmas Day, New Year's Day</td><td>Closed</td></tr>
+    </table>
+  </section>
+
+  <section id="sell">
+    <h2>Sell us your books</h2>
+    <p>Tell us a little about your books, then send it to us by WhatsApp or email with a few photos of the spines.
+      We'll come back to you with an offer.</p>
+    <p>We're especially keen on manga, graphic novels, special editions (sprayed edges, Fairyloot, Illumicrate,
+      The Broken Binding), RPG and Warhammer.</p>
+    <form id="sell-form" onsubmit="return false">
+      <label>Your name
+        <input name="name" required autocomplete="name" maxlength="80">
+      </label>
+      <label>What have you got? <span class="hint">Titles, series, authors, condition</span>
+        <textarea name="books" required maxlength="1200" placeholder="e.g. One Piece volumes 1 to 40, all in good condition"></textarea>
+      </label>
+      <label>Roughly how many books? <span class="hint">(optional)</span>
+        <input name="count" maxlength="40">
+      </label>
+      <label>Your town <span class="hint">(optional)</span>
+        <input name="town" autocomplete="address-level2" maxlength="60">
+      </label>
+      <div class="buttons">
+        <a class="button" data-via="whatsapp" href="https://wa.me/447415175737">Send by WhatsApp</a>
+        <a class="button alt" data-via="email" href="mailto:books@mrslofthouse.co.uk?subject=Sell%20your%20books">Send by email</a>
+      </div>
+      <p class="small">Your message opens in WhatsApp or your email app, ready to send. Add your photos there before
+        you press send. Nothing is stored on this website. No email app? Write to us at books@mrslofthouse.co.uk.</p>
+    </form>
+  </section>
+
+  <section>
+    <h2>Gift vouchers</h2>
+    <p>The perfect present for a book lover. Pop in for one, or buy one online through PayPal:</p>
+    <div class="vouchers">
+      <a href="https://www.paypal.com/ncp/payment/9G5RXWQAZCBEL"><img src="gift-voucher-5.jpg" alt="£5 gift voucher" width="320" height="320" loading="lazy">£5</a>
+      <a href="https://www.paypal.com/ncp/payment/KKTD8KW8P5G7G"><img src="gift-voucher-10.jpg" alt="£10 gift voucher" width="320" height="320" loading="lazy">£10</a>
+      <a href="https://www.paypal.com/ncp/payment/BRS365DUABX6L"><img src="gift-voucher-20.jpg" alt="£20 gift voucher" width="320" height="320" loading="lazy">£20</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Buying?</h2>
+    <p>Pop in and browse, or shop with us online:</p>
+    <div class="buttons">
+      <a class="button alt" href="https://www.ebay.co.uk/str/lofthouseemporium">Our eBay shop</a>
+      <a class="button alt" href="https://uk.bookshop.org/shop/mrslofthouse">New books on Bookshop.org</a>
+      <a class="button alt" href="https://www.instagram.com/mrslofthouse">Instagram</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Get in touch</h2>
+    <p>Phone <a href="tel:+441723679916">01723 679916</a> · WhatsApp <a href="https://wa.me/447415175737">07415 175737</a> ·
+      Email <a href="mailto:books@mrslofthouse.co.uk">books@mrslofthouse.co.uk</a></p>
+  </section>
+</main>
+
+<footer>Mrs Lofthouse's Emporium · 4 Queen Street · Scarborough YO11 1HA</footer>
+
+<script>
+  // The sell form: check the boxes are filled, then open WhatsApp or email with the message written out.
+  (function () {
+    var form = document.getElementById("sell-form");
+    function message() {
+      var d = new FormData(form), lines = ["Hello, I'd like to sell some books.", "", "Name: " + d.get("name").trim(),
+        "Books: " + d.get("books").trim()];
+      if (d.get("count").trim()) lines.push("How many: " + d.get("count").trim());
+      if (d.get("town").trim()) lines.push("Town: " + d.get("town").trim());
+      return lines.join("\n");
+    }
+    form.querySelectorAll("[data-via]").forEach(function (link) {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (!form.reportValidity()) return;
+        var text = message();
+        if (link.dataset.via === "whatsapp") {
+          location.href = "https://wa.me/447415175737?text=" + encodeURIComponent(text + "\n\nPhotos to follow.");
+        } else {
+          var subject = "Sell your books: " + new FormData(form).get("name").trim();
+          location.href = "mailto:books@mrslofthouse.co.uk?subject=" + encodeURIComponent(subject) +
+            "&body=" + encodeURIComponent(text + "\n\n(Please attach your photos to this email.)");
+        }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
